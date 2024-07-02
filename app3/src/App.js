@@ -6,6 +6,7 @@ import { Todo } from './models';
 import { useEffect, useState } from 'react';
 import { Card, CardActions, CardContent, Typography, Button, Grid, Box, TextField, Modal } from '@mui/material';
 import image from './assets/Titulo.png'
+import logo from './assets/TMF_by horizontal.png'
 
 
 Amplify.configure(amplifyconfig);
@@ -91,6 +92,9 @@ function App() {
 
   return (
     <div className="App">
+      <div style={{height: 60, backgroundColor: '#EAEAEA', zIndex:1}}>
+        <img src={logo} style={{height:80}}></img>
+      </div>
       <div style={{display:'flex', justifyContent:'space-between'}}>
       <Box
       component="form"
@@ -126,7 +130,7 @@ function App() {
         </div>
         <Button variant="contained" size='large' onClick={createTodo} sx={{backgroundColor:'purple',}}>Create Todo</Button>
         </Box>
-        <img src={image} alt='Titulo' style={{height:250, marginTop:-37}}></img>
+        <img src={image} alt='Titulo' style={{height:250, marginTop:-37, zIndex:-1}}></img>
         </div>
       <div style={{marginTop:-50}}>
       <Box sx={{ flexGrow: 1 , p:4}}>
