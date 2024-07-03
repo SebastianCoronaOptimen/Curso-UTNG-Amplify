@@ -6,7 +6,7 @@ import { Todo } from './models';
 import { useEffect, useState } from 'react';
 import { Card, CardActions, CardContent, Typography, Button, Grid, Box, TextField, Modal } from '@mui/material';
 import image from './assets/Titulo.png'
-import logo from './assets/TMF_by horizontal.png'
+import logo from './assets/logo optimen.png'
 
 
 Amplify.configure(amplifyconfig);
@@ -92,8 +92,8 @@ function App() {
 
   return (
     <div className="App">
-      <div style={{height: 60, backgroundColor: '#EAEAEA', zIndex:1}}>
-        <img src={logo} style={{height:80}}></img>
+      <div style={{height: 60, backgroundColor: '#98a4b4', zIndex:1}}>
+        <img src={logo} style={{height:50, margin:5}}></img>
       </div>
       <div style={{display:'flex', justifyContent:'space-between'}}>
       <Box
@@ -113,7 +113,6 @@ function App() {
           label="Name"
           defaultValue=""
           value={name}
-          color='secondary'
           focused
           onChange={handleNameChange}
         />
@@ -122,13 +121,12 @@ function App() {
           id="outlined-required"
           label="Description"
           defaultValue=""
-          color='secondary'
           focused
           value={description}
           onChange={handleDescriptionChange}
         />
         </div>
-        <Button variant="contained" size='large' onClick={createTodo} sx={{backgroundColor:'purple',}}>Create Todo</Button>
+        <Button variant="contained" size='large' onClick={createTodo} >Create Todo</Button>
         </Box>
         <img src={image} alt='Titulo' style={{height:250, marginTop:-37, zIndex:-1}}></img>
         </div>
@@ -138,18 +136,18 @@ function App() {
         {
           data.map((item)=>{
             return <Grid xs={4}>            
-            <Card sx={{ maxWidth: 345, m:2, borderColor:'purple', borderTop:'solid 4px purple'}}>
+            <Card sx={{ maxWidth: 345, m:2, borderColor:'#38489A', borderTop:'solid 4px #38489A'}}>
               <CardContent>
-                <Typography gutterBottom variant="h5" component="div" sx={{color:'#3B126B'}}>
+                <Typography gutterBottom variant="h5" component="div" sx={{color:'#576C8B'}}>
                   {item.name}
                 </Typography>
-                <Typography variant="body2" color="text.secondary" sx={{color: '#3B126B'}}>
+                <Typography variant="body2" color="text.secondary" sx={{color: '#576C8B'}}>
                   {item.description}
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small" color='secondary' onClick={()=>handleOpen(item)}>Update</Button>
-                <Button size="small" color='secondary' onClick={()=>deleteTodo(item)}>Delete</Button>
+                <Button size="small" color='primary' onClick={()=>handleOpen(item)}>Update</Button>
+                <Button size="small" color='primary' onClick={()=>deleteTodo(item)}>Delete</Button>
               </CardActions>
             </Card>
           </Grid>
