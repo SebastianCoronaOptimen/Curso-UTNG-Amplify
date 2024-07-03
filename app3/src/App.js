@@ -5,7 +5,7 @@ import { DataStore } from 'aws-amplify/datastore';
 import { Todo } from './models';
 import { useEffect, useState } from 'react';
 import { Card, CardActions, CardContent, Typography, Button, Grid, Box, TextField, Modal } from '@mui/material';
-import image from './assets/Titulo.png'
+import image from './assets/titulo.png'
 import logo from './assets/logo optimen.png'
 
 
@@ -128,7 +128,7 @@ function App() {
         </div>
         <Button variant="contained" size='large' onClick={createTodo} >Create Todo</Button>
         </Box>
-        <img src={image} alt='Titulo' style={{height:250, marginTop:-37, zIndex:-1}}></img>
+        <img src={image} alt='Titulo' style={{height:250, marginTop:-50, zIndex:-1}}></img>
         </div>
       <div style={{marginTop:-50}}>
       <Box sx={{ flexGrow: 1 , p:4}}>
